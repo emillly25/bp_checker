@@ -10,7 +10,7 @@ type Data = {
 
 const sendData: Data = {
   name: "name",
-  age: 3,
+  age: 32,
   url: "tistory.com",
 };
 
