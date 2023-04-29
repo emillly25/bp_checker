@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import { userModel } from 'src/db';
+import { userModel } from '../db';
 
 class UserController {
     async addUser(req: Request, res: Response, next: NextFunction) {

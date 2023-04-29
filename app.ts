@@ -1,6 +1,6 @@
 import express, { Request, Response } from "express";
 import 'dotenv/config';
-import { userRouter } from "src/router/user_router";
+import { userRouter } from "./src/router/user_router";
 import bodyParser from "body-parser";
 const PORT = process.env.PORT || 8080;
 const app = express();
