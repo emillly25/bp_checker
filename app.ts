@@ -1,5 +1,6 @@
 import express, { Request, Response } from "express";
 import 'dotenv/config';
+import cors from 'cors';
 import { userRouter } from "./src/router/user_router";
 import bodyParser from "body-parser";
 const PORT = process.env.PORT || 8080;
@@ -8,6 +9,15 @@ const app = express();
 
 // Content-Type: application/json 형태의 데이터를 인식하고 핸들링할 수 있게 함.
 app.use(express.json());
+
+// CORS 에러 방지
+app.use(
+  cors({
+    origin: true,
+    credentials: true, // 크로스 도메인 허용
+    methods: ['POST', 'PATCH', 'GET', 'DELETE', 'OPTIONS', 'HEAD'],
+  }),
+);
 
 
 

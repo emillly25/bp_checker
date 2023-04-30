@@ -4,7 +4,9 @@ import { userModel } from '../db';
 class UserController {
     async addUser(req: Request, res: Response, next: NextFunction) {
         try {
-            const test_case = { name: 'haelee' }
+
+            const test_case = req.body
+            console.log('req', test_case)
             const result = await userModel.postUser(test_case);
             console.log('결과', result)
             res.status(200).json(result);
